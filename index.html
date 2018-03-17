@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
-    <div class="keys">
+    <div class="keyContainer">
       <div data-key="65" class="key">
         <kbd>A</kbd>
         <span class="sound">clap</span>
@@ -55,5 +55,36 @@
     <audio data-key="75" src="sounds/tom.wav"></audio>
     <audio data-key="76" src="sounds/tink.wav"></audio>
 
+    <script>
+
+      function playSound(e){
+        // console.log(e);
+        // console.log(e.keyCode);
+
+        // to play audio
+        const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+        if(!audio) return;
+        audio.currentTime = 0; //rewind the audio to the start
+        audio.play();
+
+        // to add animation when clicking
+        const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+        key.classList.add('playing');
+
+      }
+      
+      // right after the animation, remove the animation
+      const keys = document.querySelectorAll('.key');
+      keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
+      function removeTransition(e){
+        if(e.propertyName != 'transform') return;
+        // console.log(this);
+        this.classList.remove('playing');
+      }
+
+      window.addEventListener('keydown', playSound);
+
+    </script>
   </body>
 </html>
