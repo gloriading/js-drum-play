@@ -1,0 +1,57 @@
+html {
+  background-image: url("images/bg.jpeg");
+  background-size: cover;
+  font-size: 16px;
+  text-align: center;
+}
+
+.titleContainer {
+  display: flex;
+  min-height: 15vh;
+  justify-content: space-between;
+  align-items: center;
+  color: whitesmoke;
+  font-family: sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 1.1em;
+}
+
+.title-start {
+  margin-left: 2rem;
+}
+.title-end {
+  margin-right: 2rem;
+}
+
+.keyContainer {
+  display: flex;
+  flex: 1;
+  min-height: 80vh;
+  justify-content: center; /* horizontally */
+  align-items: center; /* vertically */
+}
+
+.key {
+  border: 3px solid white;
+  border-radius: 50%;
+  margin: 0.6rem;
+  padding: 1.4rem 0.6rem;
+  width: 10rem;
+  text-align: center;
+  background: rgba(255,255,255,0.3);
+  text-shadow: 0 0 .5rem white;
+  transition: all 0.07s;
+  cursor: pointer;
+}
+
+kbd {
+  display: block;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.playing {
+  transform: scale(1.5);
+  border-color: #32CD32;
+  box-shadow: 0 0 1rem #32CD32;
+}
