@@ -19,6 +19,24 @@ html {
 .title-start {
   margin-left: 2rem;
 }
+
+.title-start a {
+  text-decoration: none;
+  color:inherit;
+}
+
+.links:hover {
+  color: yellow;
+}
+
+.links:hover span {
+  display: inline-block;
+}
+
+.links span {
+  display: none;
+}
+
 .title-end {
   margin-right: 2rem;
 }
