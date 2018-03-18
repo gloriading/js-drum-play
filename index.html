@@ -2,10 +2,18 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Playing the Drum</title>
+    <title>Play the Drum</title>
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
+    <div class="titleContainer">
+      <div class="title-start">
+        Let's play some drums!
+      </div>
+      <div class="title-end">
+        Press the following keys on your keyboard.
+      </div>
+    </div>
     <div class="keyContainer">
       <div data-key="65" class="key">
         <kbd>A</kbd>
@@ -72,7 +80,7 @@
         key.classList.add('playing');
 
       }
-      
+
       // right after the animation, remove the animation
       const keys = document.querySelectorAll('.key');
       keys.forEach(key => key.addEventListener('transitionend', removeTransition));

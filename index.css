@@ -5,10 +5,28 @@ html {
   text-align: center;
 }
 
+.titleContainer {
+  display: flex;
+  min-height: 15vh;
+  justify-content: space-between;
+  align-items: center;
+  color: whitesmoke;
+  font-family: sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 1.1em;
+}
+
+.title-start {
+  margin-left: 2rem;
+}
+.title-end {
+  margin-right: 2rem;
+}
+
 .keyContainer {
   display: flex;
-  /* flex: 1; */
-  min-height: 100vh;
+  flex: 1;
+  min-height: 80vh;
   justify-content: center; /* horizontally */
   align-items: center; /* vertically */
 }
@@ -29,6 +47,8 @@ html {
 kbd {
   display: block;
   font-size: 2rem;
+  font-family: Arial;
+  font-weight: bold;
 }
 
 .sound {
